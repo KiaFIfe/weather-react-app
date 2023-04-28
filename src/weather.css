@@ -1,0 +1,16 @@
+li {
+list-style-type: none;}
+.temp {
+  font-size: 35px;
+}
+.container {
+  background-color: #fff;
+  color:rgb(113, 113, 113);
+  width: 520px;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 30px;
+  box-shadow: 10px 10px 20px #68badc;
+  border-radius: 7px;
+}
+

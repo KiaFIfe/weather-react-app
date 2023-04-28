@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+}
+body {
+  background: linear-gradient(0.25turn, #76c4e6, #bff2f7, #5eadee);
+}
