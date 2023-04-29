@@ -6,7 +6,7 @@ export default function App() {
     <div className="App-Container">
       <div className="Container">
         <h1 className="m-4">React Weather</h1>
-<Weather/>
+        <Weather city="Tokyo" />
         <footer>
           <p className="m-5">This project was cooded by Likia Fife</p>
           <a
