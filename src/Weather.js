@@ -27,6 +27,9 @@ export default function Weather(props) {
     axios.get(url).then(showWeather);
     axios.get(forecastUrl).then(showForecast);
   }
+  function showForecast(){
+    return
+  }
   function handleSubmit(event) {
     event.preventDefault();
     searchCity();
@@ -49,7 +52,7 @@ export default function Weather(props) {
               onChange={search}
               className="m-3"
             />
-            <input type="submit" />
+            <input type="submit"/>
           </form>
           <WeatherResponse data={weatherData} />
           <Forecast />

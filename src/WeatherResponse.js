@@ -1,5 +1,6 @@
 import React from "react";
 import Date from "./Date";
+import MetricConversion from "./MetricConversion";
 
 export default function weatherData(props) {
   return (
@@ -9,7 +10,7 @@ export default function weatherData(props) {
         <div className="col">
           <img src={props.data.iconUrl} alt="Weather icon" />
         </div>
-        <div className="col temp">{Math.round(props.data.temp)}°c</div>
+        <MetricConversion celsiusTemp={props.data.temp} />
         <div className="col">
           <ul>
             <li>Humidity: {Math.round(props.data.humid)}</li>
