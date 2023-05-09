@@ -1,11 +1,20 @@
 li {
-list-style-type: none;}
+  list-style-type: none;
+}
 .temp {
-  font-size: 35px;
+  font-size: 60px;
+}
+.links {
+  font-size: 25px;
+}
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
 }
 .container {
   background-color: #fff;
-  color:rgb(113, 113, 113);
+  color: rgb(113, 113, 113);
   width: 520px;
   display: block;
   margin: 0 auto;
@@ -13,4 +22,3 @@ list-style-type: none;}
   box-shadow: 10px 10px 20px #68badc;
   border-radius: 7px;
 }
-

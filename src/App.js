@@ -8,7 +8,7 @@ export default function App() {
         <h1 className="m-4">React Weather</h1>
         <Weather city="Tokyo" />
         <footer>
-          <p className="m-5">This project was cooded by Likia Fife</p>
+          <p className="m-5">This project was coded by Likia Fife</p>
           <a
             href="https://github.com/KiaFIfe/React-weather-app"
             target="_blank"

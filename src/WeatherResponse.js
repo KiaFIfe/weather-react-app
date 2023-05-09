@@ -8,9 +8,14 @@ export default function weatherData(props) {
       {" "}
       <div className="row">
         <div className="col">
-          <img src={props.data.iconUrl} alt="Weather icon" />
+          <img className="image pt-3" src={props.data.iconUrl} alt="Weather icon" />
         </div>
-        <MetricConversion celsiusTemp={props.data.temp} />
+        <div className="col">
+          <MetricConversion celsiusTemp={props.data.temp} />
+        </div>
+      </div>
+      <div className="row">
+        {" "}
         <div className="col">
           <ul>
             <li>Humidity: {Math.round(props.data.humid)}</li>
@@ -20,10 +25,7 @@ export default function weatherData(props) {
         <div className="col">
           <ul>
             <li>
-              <h3>Weather</h3>
-            </li>
-            <li>
-              <Date date={props.data.date} /> time{" "}
+              <Date date={props.data.date} />
             </li>
             <li className="text-capitalize">{props.data.description}</li>
           </ul>

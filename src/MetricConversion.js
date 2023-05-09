@@ -19,13 +19,17 @@ export default function MetricConversion(props) {
     return (
       <div>
         {" "}
-        <div className="col temp">
-          {Math.round(props.celsiusTemp)}°c |{" "}
-          <a href="/" onClick={showFar}>
-            F
-          </a>
+        <div className="col temp pt-5 pb-3">
+          {Math.round(props.celsiusTemp)}°
+          <span className="links">
+            {" "}
+            C |
+            <a className="links" href="/" onClick={showFar}>
+              {" "}
+              F
+            </a>
+          </span>
         </div>
-        ;
       </div>
     );
   } else {
@@ -34,12 +38,14 @@ export default function MetricConversion(props) {
         {" "}
         <div className="col temp">
           {Math.round(changeFar())}°{" "}
-          <a href="/" onClick={showCel}>
-            C
-          </a>{" "}
-          | F
+          <span className="links">
+            {" "}
+            <a className="links" href="/" onClick={showCel}>
+              C
+            </a>{" "}
+            | F
+          </span>
         </div>
-        ;
       </div>
     );
   }
