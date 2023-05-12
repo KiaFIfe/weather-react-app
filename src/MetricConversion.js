@@ -36,7 +36,7 @@ export default function MetricConversion(props) {
     return (
       <div>
         {" "}
-        <div className="col temp pt-5 pb-3">
+        <div className="col temp pt-5 pb-3 ">
           {Math.round(changeFar())}°{" "}
           <span className="links">
             {" "}

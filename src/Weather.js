@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./weather.css";
-// import Forecast from "./Forecast";
+import Forecast from "./Forecast";
 import WeatherResponse from "./WeatherResponse";
 import axios from "axios";
 
@@ -22,14 +22,10 @@ export default function Weather(props) {
   function searchCity() {
     const apiKey = "f49ee1e2561369c11af5b8f8810cf134";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    // let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
     axios.get(url).then(showWeather);
-    // axios.get(forecastUrl).then(showForecast);
   }
-  function showForecast() {
-    return;
-  }
+
   function handleSubmit(event) {
     event.preventDefault();
     searchCity();
@@ -40,21 +36,23 @@ export default function Weather(props) {
 
   if (weatherData.run) {
     return (
-      <div className="Weather-container ">
+      <div>
         <div className="container p-4">
-          {" "}
-          <h2 className="text-capitalize ms-3">{city}</h2>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="search"
-              placeholder="Search for a city"
-              onChange={search}
-              className="m-3"
-            />
-            <input type="submit" />
-          </form>
-          <WeatherResponse data={weatherData} />
-          {/* <Forecast city={} /> */}
+          <div className="weather-container">
+            {" "}
+            <h2 className="text-capitalize title-city">{city}</h2>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="search"
+                placeholder="Search for a city"
+                onChange={search}
+                className="m-3"
+              />
+              <input type="submit" />
+            </form>
+            <WeatherResponse data={weatherData} />
+            <Forecast data={weatherData} />
+          </div>
         </div>
       </div>
     );
