@@ -1,11 +1,18 @@
 .forecast-days {
-  max-width: 95px;
   text-align: center;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: rgb(167, 204, 213);
+  margin-left:20px;
 }
-.Forcast-container{
+.Forcast-container {
   max-width: 500px;
 }
-.forecast-img{
-    width: 150px;
-
+.forecast-img {
+  width: 150px;
+}
+.max-temp{
+  margin-left: 3px;
+  opacity: 0.6;
 }

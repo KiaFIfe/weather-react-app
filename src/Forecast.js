@@ -12,71 +12,18 @@ export default function Forecast(props) {
               <div className="col">Mon</div>{" "}
               <div className="row">
                 {" "}
-                <img className="forecast" src={props.data.iconUrl} alt="Weather icon" />
+                <img
+                  className="forecast"
+                  src={props.data.iconUrl}
+                  alt="Weather icon"
+                />
               </div>
               <div className="row">
-                <span className="col">19</span>
-                <span className="col">30</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="row">
-            <div className="forecast-days">
-              <div className="col">Mon</div>{" "}
-              <div className="row">
-                {" "}
-                <img className="forecast" src={props.data.iconUrl} alt="Weather icon" />
-              </div>
-              <div className="row">
-                <span className="col">19</span>
-                <span className="col">30</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="row">
-            <div className="forecast-days">
-              <div className="col">Mon</div>{" "}
-              <div className="row">
-                {" "}
-                <img className="forecast" src={props.data.iconUrl} alt="Weather icon" />
-              </div>
-              <div className="row">
-                <span className="col">19</span>
-                <span className="col">30</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="row">
-            <div className="forecast-days">
-              <div className="col">Mon</div>{" "}
-              <div className="row">
-                {" "}
-                <img className="forecast" src={props.data.iconUrl} alt="Weather icon" />
-              </div>
-              <div className="row">
-                <span className="col">19</span>
-                <span className="col">30</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col">
-          <div className="row">
-            <div className="forecast-days">
-              <div className="col">Mon</div>{" "}
-              <div className="row">
-                {" "}
-                <img className="forecast" src={props.data.iconUrl} alt="Weather icon" />
-              </div>
-              <div className="row">
-                <span className="col">19</span>
-                <span className="col">30</span>
+                <div className="col">
+                  {" "}
+                  <span className="min-temp">19°</span>
+                  <span className="max-temp"> 30°</span>
+                </div>
               </div>
             </div>
           </div>
