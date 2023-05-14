@@ -8,9 +8,11 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.city);
   const [weatherData, setWeatherData] = useState({ run: false });
   function showWeather(response) {
+    console.log(response.data.coord);
     let icon = response.data.weather[0].icon;
     setWeatherData({
       run: true,
+      coord:response.data.coord,
       date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
       humid: response.data.main.humidity,
@@ -51,7 +53,7 @@ export default function Weather(props) {
               <input type="submit" />
             </form>
             <WeatherResponse data={weatherData} />
-            <Forecast data={weatherData} />
+            <Forecast coord={weatherData.coord} />
           </div>
         </div>
       </div>
