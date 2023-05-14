@@ -1,5 +1,5 @@
 import React from "react";
-import Date from "./Date";
+import FormatDate from "./FormatDate";
 import MetricConversion from "./MetricConversion";
 
 export default function weatherData(props) {
@@ -8,7 +8,11 @@ export default function weatherData(props) {
       {" "}
       <div className="row">
         <div className="col">
-          <img className="image pt-3" src={props.data.iconUrl} alt="Weather icon" />
+          <img
+            className="image pt-3"
+            src={props.data.iconUrl}
+            alt="Weather icon"
+          />
         </div>
         <div className="col">
           <MetricConversion celsiusTemp={props.data.temp} />
@@ -25,7 +29,7 @@ export default function weatherData(props) {
         <div className="col">
           <ul>
             <li>
-              <Date date={props.data.date} />
+              <FormatDate date={props.data.date} />
             </li>
             <li className="text-capitalize">{props.data.description}</li>
           </ul>

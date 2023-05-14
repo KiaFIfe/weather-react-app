@@ -1,6 +1,6 @@
 import React from "react";
 import "./Forecast.css";
-import axios, { Axios } from "axios";
+import axios from "axios";
 
 export default function Forecast(props) {
   const longitude = 74;
@@ -8,10 +8,10 @@ export default function Forecast(props) {
   const apiKey = "f49ee1e2561369c11af5b8f8810cf134";
   let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
-  function handleResponse(response){
-    console.log(response.data.list[0].main)
+  function handleResponse(response) {
+    console.log(response.data.list[0].main);
   }
-  axios.get(apiUrl).then(handleResponse)
+  axios.get(apiUrl).then(handleResponse);
 
   return (
     <div className="Forcast-container m-4">
@@ -25,7 +25,7 @@ export default function Forecast(props) {
                 {" "}
                 <img
                   className="forecast"
-                  src={props.data.iconUrl}
+                  src={"/"}
                   alt="Weather icon"
                 />
               </div>
